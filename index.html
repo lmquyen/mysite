@@ -1,13 +1,33 @@
 <!DOCTYPE html>
-
+<html lang="vi">
 <head>
-  <script type="text/javascript">
-      
-  </script>
+    <meta charset="UTF-8">
+    <title>Trang Liên Hệ</title>
+    <style>
+        body { font-family: sans-serif; max-width: 400px; margin: 50px auto; }
+        input, textarea { width: 100%; margin-bottom: 10px; padding: 8px; }
+        button { background: #2ea44f; color: white; border: none; padding: 10px 20px; cursor: pointer; }
+    </style>
 </head>
-
 <body>
-  <p>
-  Test5
-  </p>
+
+    <h2>Gửi tin nhắn cho tôi</h2>
+    
+    <form
+	  action="https://formspree.io/f/xdawwkjr"
+	  method="POST"
+	>
+	  <label>
+		Your email:
+		<input type="email" name="email">
+	  </label>
+	  <label>
+		Your message:
+		<textarea name="message"></textarea>
+	  </label>
+	  <!-- your other form fields go here -->
+	  <button type="submit">Send</button>
+	</form>
+
 </body>
+</html>
