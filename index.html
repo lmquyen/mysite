@@ -1,13 +1,5 @@
-<!DOCTYPE html>
 <html>
 <head>
-	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <script type="text/javascript">
-        (function() {
-            // Thay 'YOUR_PUBLIC_KEY' bằng Public Key trong trang Account của EmailJS
-            emailjs.init("tZO450pZWxz-SOY-S");
-        })();
-    </script>
 	<style>
         body { font-family: sans-serif; max-width: 400px; margin: 50px auto; }
         input, textarea { width: 100%; margin-bottom: 10px; padding: 8px; }
@@ -39,28 +31,5 @@
 		<input type="text" id="email" placeholder="email" required-->
         <button type="submit">Submit</button>
     </form>
-
-    <script>
-        document.getElementById('contact-form').addEventListener('submit', function(event) {
-            event.preventDefault();
-            
-            // Các tham số tương ứng với {{variable}} trong Template EmailJS
-            const params = {
-                to_email: document.getElementById('to_email').value,
-                subject: document.getElementById('subject').value,
-                message: document.getElementById('message').value,
-				email_cc: document.getElementById('email_cc').value
-				//email: document.getElementById('email').value
-            };
-
-            // Thay 'YOUR_SERVICE_ID' và 'YOUR_TEMPLATE_ID'
-            emailjs.send('service_cl5jf6e', 'template_1p2524w', params)
-                .then(function() {
-                    alert('Send mail successfull!');
-                }, function(error) {
-                    alert('Error: ' + JSON.stringify(error));
-                });
-        });
-    </script>
 </body>
 </html>
